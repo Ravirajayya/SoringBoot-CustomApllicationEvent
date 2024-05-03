@@ -18,7 +18,8 @@ In Spring applications, a custom application event is a user-defined class that 
 **Real time applications:**
 Here are a couple of real-time application examples of custom events in Spring:
 
-1. Asynchronous Task Processing:
+**1. Asynchronous Task Processing:**
+
 ●	Scenario: Imagine a web application where users upload large files. You don't want the file upload process to block the user's request.
 
 ●	Solution:
@@ -28,7 +29,8 @@ Here are a couple of real-time application examples of custom events in Spring:
 ○	The listener asynchronous processes the uploaded file (e.g., resize, store in database). This keeps the user experience smooth and avoids blocking the main request.
 ****************************************************************************************************************************
 
-2. Caching Invalidation:
+**2. Caching Invalidation:**
+
 ●	Scenario: You have a caching layer for frequently accessed data in your application. When the underlying data source is updated, the cache needs to be invalidated to ensure data consistency.
 
 ●	Solution:
@@ -38,7 +40,8 @@ Here are a couple of real-time application examples of custom events in Spring:
 ○	The listener invalidates the relevant cache entries associated with the updated data, ensuring the cache reflects the latest changes.
 ****************************************************************************************************************************
 
-3. Distributed System Communication:
+**3. Distributed System Communication:**
+
 ●	Scenario: In a microservices architecture, you might have multiple services working together. When a user performs an action in one service, it might trigger actions in another service.
 
 ●	Solution:
@@ -48,7 +51,8 @@ Here are a couple of real-time application examples of custom events in Spring:
 ○	The payment service listener can then initiate the payment process upon receiving the OrderPlacedEvent. This enables communication and coordination between independent services.
 ****************************************************************************************************************************
 
-4. System Monitoring and Alerts:
+**4. System Monitoring and Alerts:**
+
 ●	Scenario: You want to monitor critical events within your application and trigger alerts if necessary.
 
 ●	Solution:
