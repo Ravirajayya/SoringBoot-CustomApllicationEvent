@@ -20,6 +20,7 @@ Here are a couple of real-time application examples of custom events in Spring:
 
 1. Asynchronous Task Processing:
 ●	Scenario: Imagine a web application where users upload large files. You don't want the file upload process to block the user's request.
+
 ●	Solution:
 ○	Define a FileUploadedEvent class extending ApplicationEvent with the uploaded file information.
 ○	Upon successful file upload, publish a FileUploadedEvent.
@@ -29,6 +30,7 @@ Here are a couple of real-time application examples of custom events in Spring:
 
 2. Caching Invalidation:
 ●	Scenario: You have a caching layer for frequently accessed data in your application. When the underlying data source is updated, the cache needs to be invalidated to ensure data consistency.
+
 ●	Solution:
 ○	Define a DataUpdatedEvent class extending ApplicationEvent with the specific data entity or ID that was updated.
 ○	Whenever data is updated in the database or any persistent storage, publish a DataUpdatedEvent.
@@ -38,6 +40,7 @@ Here are a couple of real-time application examples of custom events in Spring:
 
 3. Distributed System Communication:
 ●	Scenario: In a microservices architecture, you might have multiple services working together. When a user performs an action in one service, it might trigger actions in another service.
+
 ●	Solution:
 ○	Define custom events specific to the interactions between services (e.g., OrderPlacedEvent, PaymentReceivedEvent).
 ○	When a user places an order in the order service, publish an OrderPlacedEvent.
@@ -47,6 +50,7 @@ Here are a couple of real-time application examples of custom events in Spring:
 
 4. System Monitoring and Alerts:
 ●	Scenario: You want to monitor critical events within your application and trigger alerts if necessary.
+
 ●	Solution:
 ○	Define custom events for critical situations (e.g., OutOfStockEvent, LowMemoryEvent).
 ○	In your application logic, publish these events when specific conditions are met (e.g., low stock levels, memory pressure).
